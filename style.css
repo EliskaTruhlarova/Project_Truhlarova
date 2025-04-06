@@ -1,0 +1,353 @@
+* {
+  box-sizing: border-box;
+}
+
+/* VŠEOBECNÉ */
+body {
+  background-color: black;
+  height: 100%;
+}
+h1 {
+  font-size: 70px;
+  text-align: center;
+  color: white;
+  margin: 15px 0;
+}
+
+h2 {
+  font-size: 45px;
+  margin: 15px 0;
+}
+
+h3 {
+  font-size: 20px;
+  margin: 15px 0;
+}
+
+p {
+  font-size: 15px;
+  margin: 5px 0;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 400px) {
+  h1 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  h3,
+  p {
+    font-size: 16px;
+    text-align: center;
+  }
+}
+
+/* BUTTONS */
+.link {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.btn {
+  background-color: rgb(214, 28, 28);
+  color: #ffffff;
+  padding: 5px;
+  font-size: 23px;
+  font-family: "Times New Roman", Times, serif;
+  text-decoration: none;
+}
+
+/* IKONKA ŠIPKY */
+#scrollToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  z-index: 100;
+  font-size: 60px;
+  color: rgb(214, 28, 28);
+  background-color: transparent;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+#scrollToTopBtn:hover {
+  transform: scale(1.2);
+  color: #cc0000;
+}
+
+/* MAIN PAGE */
+/* header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 5px 18px;
+  align-items: center;
+  height: 50px;
+}
+
+.header img {
+  height: 40px;
+  width: auto;
+}
+
+/* main */
+.main-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.main-image {
+  display: flex;
+  background-size: cover;
+  background-position: center;
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.95),
+      rgba(0, 0, 0, 0.65)
+    ),
+    url(./images/background.jpg);
+  height: 100vh;
+}
+
+.formMain {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.emailR {
+  background-color: transparent;
+  border: 2px solid white;
+  padding: 5px 10px;
+  width: 100%;
+  height: 50px;
+}
+
+.btnR {
+  width: 60px;
+  background-color: rgb(214, 28, 28);
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid rgb(214, 28, 28);
+  font-size: 18px;
+  height: 50px;
+  padding: 5px 2px;
+}
+
+@media (min-width: 768px) {
+  .main-wrapper {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+
+/* MOVIES */
+.movies-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 50px 0;
+}
+
+.movie-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.movie-icon {
+  max-width: 300px;
+}
+
+/* obrázky */
+.movie-icon img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.movie-icon:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .movies-wrapper {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .movie-icons {
+    flex-direction: row;
+  }
+
+  .movie-icon {
+    width: 15vw;
+    height: auto;
+  }
+}
+
+/* FOOTER */
+.grid-container {
+  display: grid;
+  gap: 10px;
+  justify-content: center;
+  font-size: 18px;
+  padding: 60px 0;
+}
+
+.grid-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.grid-column a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.grid-column a:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0 auto;
+  }
+  .grid-container {
+    width: 50%;
+  }
+}
+
+/* REGISTER.HTML */
+.firstName,
+.lastName,
+.email,
+.password,
+.password2 {
+  background-color: transparent;
+  border: 2px solid white;
+  padding: 5px 10px;
+  outline: none;
+  color: white;
+  width: 380px;
+  height: 50px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+form button {
+  background-color: rgb(214, 28, 28);
+  color: #ffffff;
+  height: 30px;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid rgb(214, 28, 28);
+  font-size: 18px;
+  width: 380px;
+}
+
+.form-register {
+  display: flex;
+  justify-content: center;
+  height: 80vh;
+}
+
+@media (max-width: 400px) {
+  .firstName,
+  .lastName,
+  .email,
+  .password,
+  .password2 {
+    width: 280px;
+  }
+
+  form button {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .firstName,
+  .lastName,
+  .email,
+  .password,
+  .password2 {
+    width: 600px;
+  }
+
+  form button {
+    width: 600px;
+  }
+}
+
+/* FORMULÁŘE */
+/* ROLETA */
+#movies {
+  background-color: black;
+  border: 3px solid rgb(214, 28, 28);
+  color: white;
+  height: auto;
+  width: 160px;
+  text-align: center;
+  padding: 5px 2px;
+  font-size: 18px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+/* JEDNOTLIVÉ FILMY MOVIES.HTML*/
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.icons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px 0;
+}
+
+.icon {
+  height: 290px;
+  transform: rotate(3deg) scale(1.03);
+}
+
+.icon:hover {
+  transform: rotate(8deg) scale(1.03);
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    width: 50%;
+    margin: 0 auto;
+  }
+  .icons {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
